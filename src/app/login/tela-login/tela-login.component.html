@@ -1,5 +1,6 @@
 <div class='login'>
-<input type="text" placeholder="Username">
-<input type='password' placeholder="Password">
-<button>Logar</button>
+<input type="text" placeholder="Username" [(ngModel)]="user">
+<input type='password' placeholder="Password" [(ngModel)]="password">
+
+<button (click)="verifica()">Logar</button>
 </div>

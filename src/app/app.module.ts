@@ -4,6 +4,7 @@ import{ LoginModule } from './login/login.module'
 import { AppComponent } from './app.component';
 import { TelaLoginComponent } from './login/tela-login/tela-login.component';
 import { RouterModule } from '@angular/router';
+import { ConteudoModule } from './conteudo/conteudo.module';
 
 
 @NgModule({
@@ -17,9 +18,10 @@ import { RouterModule } from '@angular/router';
         component: TelaLoginComponent,
         canActivate: []
       }
-    ]),
+    ]), 
     BrowserModule,
-    LoginModule
+    LoginModule,
+    ConteudoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

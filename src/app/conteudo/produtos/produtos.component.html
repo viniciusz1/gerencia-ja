@@ -1,3 +1,4 @@
-<p>
-  produtos works!
-</p>
+<div *ngFor='let id of listaProdutos'>
+Produto id: {{id}}
+<button (click)='abrirProduto(id)'>Especificações</button>
+</div>

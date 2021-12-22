@@ -10,6 +10,11 @@ export class ClientesComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  } 
+  listaClientes = [
+  'Juninho','Cléber', 'Valdemiro', 'Aristofléio'
+  ]
+  AbreGerenciarClientes(){
+    
   }
-
 }

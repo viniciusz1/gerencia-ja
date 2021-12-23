@@ -17,6 +17,9 @@ export class ProdutosComponent implements OnInit {
     1, 2, 3, 4, 5, 6, 7
   ]
   abrirProduto(idProduto) {
-    this.router.navigate(['loja/produtos', idProduto])
+    this.router.navigate(['loja/produtos/', idProduto])
+  }
+  abrirGerenciarProdutos(){
+    this.router.navigate(['loja/produtos/gerenciar-produtos'])
   }
 }

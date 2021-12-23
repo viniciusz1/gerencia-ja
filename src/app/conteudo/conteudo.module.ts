@@ -20,8 +20,8 @@ const routes: Routes = [
         path: 'produtos',
         children: [
           { path: '', component: ProdutosComponent, },
-          { path: ':id', component: ProdutoComponent, },
           { path: 'gerenciar-produtos', component: GerenciarProdutosComponent },
+          { path: ':idProduto', component: ProdutoComponent },
         ]
       },
       {

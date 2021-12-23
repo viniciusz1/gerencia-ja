@@ -10,10 +10,10 @@ export class ProdutoComponent implements OnInit {
   constructor(private route: ActivatedRoute,
     private router: Router) {
     this.idProduto = route.snapshot.paramMap.get('idProduto')
-  }
-console(idProduto){
-  alert(idProduto)
-}
+ }
+// console(idProduto){
+//   alert(idProduto)
+// }
   ngOnInit() {
   }
 }

@@ -7,7 +7,6 @@ import { TelaPrincipalComponent } from './tela-principal/tela-principal.componen
 import { RouterModule, Routes } from '@angular/router';
 import { GerenciarClientesComponent } from './clientes/gerenciar-clientes/gerenciar-clientes.component';
 import { GerenciarPedidosComponent } from './pedidos/gerenciar-pedidos/gerenciar-pedidos.component';
-import { GerenciarProdutosComponent } from './produtos/gerenciar-produtos/gerenciar-produtos.component';
 import { ProdutoComponent } from './produtos/produto/produto.component';
 
 const routes: Routes = [
@@ -20,7 +19,6 @@ const routes: Routes = [
         path: 'produtos',
         children: [
           { path: '', component: ProdutosComponent, },
-          { path: 'gerenciar-produtos', component: GerenciarProdutosComponent },
           { path: ':idProduto', component: ProdutoComponent },
         ]
       },
@@ -49,6 +47,6 @@ const routes: Routes = [
     RouterModule.forRoot(routes),
     CommonModule
   ],
-  declarations: [PedidosComponent, ClientesComponent, ProdutosComponent, TelaPrincipalComponent, GerenciarClientesComponent, GerenciarPedidosComponent, GerenciarProdutosComponent, ProdutoComponent]
+  declarations: [PedidosComponent, ClientesComponent, ProdutosComponent, TelaPrincipalComponent, GerenciarClientesComponent, GerenciarPedidosComponent, ProdutoComponent]
 })
 export class ConteudoModule { }

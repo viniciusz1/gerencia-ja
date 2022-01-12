@@ -1,12 +1,12 @@
-<div *ngFor='let idProduto of listaProdutos' class="produto">
-    Produto id: {{idProduto}}
-    <button (click)='abrirProduto(idProduto)'>Editar Produto</button>
-    <button (click)='removerProduto(idProduto)'>Remover Produto</button>
-    <button>Adicionar ao carrinho</button>
+<div *ngFor="let idProduto of listaProdutos; let i = index">
+    <li *ngIf="idProduto.deleted != true">
+        Produto: {{idProduto.nome}} Valor:{{idProduto.preco}},00R$
+        <button (click)='abrirProduto(idProduto.id)'>Editar Produto</button>
+        <button (click)='removerProduto(i)'>Remover Produto</button>
+        <button>Adicionar ao carrinho</button>
+    </li>
 </div>
 <br>
 <div>
-    <button>
-        Adicionar Produto
-    </button>
+    <button (click)='abrirProduto()'>Editar Produto</button>
 </div>

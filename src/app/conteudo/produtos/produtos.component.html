@@ -1,5 +1,12 @@
-<div *ngFor='let idProduto of listaProdutos'>
-Produto id: {{idProduto}}
-<button (click)='abrirProduto(idProduto)'>Especificações</button>
+<div *ngFor='let idProduto of listaProdutos' class="produto">
+    Produto id: {{idProduto}}
+    <button (click)='abrirProduto(idProduto)'>Editar Produto</button>
+    <button (click)='removerProduto(idProduto)'>Remover Produto</button>
+    <button>Adicionar ao carrinho</button>
 </div>
-<button (click)='abrirGerenciarProdutos()'>Gerenciar-produtos</button>
+<br>
+<div>
+    <button>
+        Adicionar Produto
+    </button>
+</div>

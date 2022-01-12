@@ -19,7 +19,8 @@ export class ProdutosComponent implements OnInit {
   abrirProduto(idProduto) {
     this.router.navigate(['loja/produtos/', idProduto])
   }
-  abrirGerenciarProdutos(){
-    this.router.navigate(['loja/produtos/gerenciar-produtos'])
+  removerProduto(idProduto){
+    console.log(idProduto)
+    
   }
 }

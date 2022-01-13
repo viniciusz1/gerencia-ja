@@ -6,6 +6,7 @@ import { ProdutosComponent } from './produtos/produtos.component';
 import { TelaPrincipalComponent } from './tela-principal/tela-principal.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ProdutoComponent } from './produtos/produto/produto.component';
+import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   {
@@ -41,7 +42,8 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes),
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   declarations: [PedidosComponent, ClientesComponent, ProdutosComponent, TelaPrincipalComponent, ProdutoComponent]
 })

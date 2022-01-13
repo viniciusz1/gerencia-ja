@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { TelaLoginComponent } from './login/tela-login/tela-login.component';
 import { RouterModule } from '@angular/router';
 import { ConteudoModule } from './conteudo/conteudo.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { ConteudoModule } from './conteudo/conteudo.module';
     ]), 
     BrowserModule,
     LoginModule,
-    ConteudoModule
+    ConteudoModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

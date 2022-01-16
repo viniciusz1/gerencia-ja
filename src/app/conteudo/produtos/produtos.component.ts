@@ -7,27 +7,25 @@ import { e } from '@angular/core/src/render3';
   styleUrls: ['./produtos.component.css']
 })
 export class ProdutosComponent implements OnInit {
-  @Output() listaProdutos = [
-    {nome: 'poi', id: 1, preco: 123, deleted: false},
-    {nome: 'pasdfi', id: 2, preco: 23, deleted: false},
-    {nome: 'poasdfdfdi', id: 3, preco: 13, deleted: false},
-    {nome: 'poidfds', id: 14, preco: 12, deleted: false},
-
-  ]
+  
+  
   constructor(
     private router: Router
   ) { }
 
   ngOnInit() {
+    
   }
-      
+  Tdados = JSON.parse(localStorage.getItem("Tdados"));
   nome= "";
   preco;
   editarProduto(id) {
-    this.router.navigate(['loja/produtos/', id])
+    this.router.navigate(['loja/produtos/', id])    
+    localStorage.setItem("dados", JSON.stringify(this.Tdados[id-1])); 
   }
   removerProduto(index){
-    this.listaProdutos[index].deleted= true;
+    this.Tdados[index].deleted= true;
+    localStorage.setItem("Tdados", JSON.stringify(this.Tdados)); 
     console.log(index)
   }
   clicou =false;
@@ -38,11 +36,23 @@ export class ProdutosComponent implements OnInit {
     let objeto= {
       nome: this.nome,
       preco: this.preco,
-      id: this.listaProdutos.length+1,
+      id: this.Tdados.length+1,
       deleted: false
     }
 
-    this.listaProdutos.push(objeto)
+    this.Tdados.push(objeto)
     this.clicou= false;
+    localStorage.setItem("Tdados", JSON.stringify(this.Tdados));
+  }
+  teste(){
+    localStorage.setItem("dados", JSON.stringify(this.Tdados)); 
+  }
+  listaCarrinho = []
+  adicionar;
+  adicionarCarrinho(i){
+    this.adicionar = JSON.parse(localStorage.getItem("Ldados"));
+    this.listaCarrinho.push(this.adicionar)
+    console.log(this.listaCarrinho)    
+    localStorage.setItem("Ldados", JSON.stringify(this.Tdados[i]));
   }
 }

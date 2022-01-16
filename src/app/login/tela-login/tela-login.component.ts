@@ -8,6 +8,13 @@ import { Router } from '@angular/router';
 export class TelaLoginComponent implements OnInit {
 
   constructor(private router: Router) { }
+  listaProdutos = [
+    {nome: 'poi', id: 1, preco: 123, deleted: false},
+    {nome: 'pasdfi', id: 2, preco: 23, deleted: false},
+    {nome: 'poasdfdfdi', id: 3, preco: 13, deleted: false},
+    {nome: 'poidfds', id: 4, preco: 12, deleted: false},
+
+  ]
 users = [
   {user: 'eu', password: 'eu'},
   {user: 'Pedro', password: 'pedro123'},
@@ -21,12 +28,13 @@ verifica(){
   for(let i of this.users){
     if(i.user == this.user && i.password == this.password){
       localStorage.setItem('user', this.user)
-      localStorage.setItem('password', this.password)
+      localStorage.setItem('password', this.password)      
+      localStorage.setItem("Tdados", JSON.stringify(this.listaProdutos)); 
       this.router.navigate(['/tela-principal'])
     }
   }
 }
   ngOnInit() {
-  }
+      }
 
 }

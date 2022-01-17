@@ -9,10 +9,11 @@ export class PedidosComponent implements OnInit {
 
   constructor() { }
 
-lista = localStorage.getItem('Ldados')
-usuario = localStorage.getItem('user')
+  Ldados = JSON.parse(localStorage.getItem("Ldados"));
+  user = localStorage.getItem('user')
   ngOnInit() {
-    console.log(this.lista)
+    console.log(this.Ldados)
+
   }
 
 }

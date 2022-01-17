@@ -44,15 +44,12 @@ export class ProdutosComponent implements OnInit {
     this.clicou= false;
     localStorage.setItem("Tdados", JSON.stringify(this.Tdados));
   }
-  teste(){
-    localStorage.setItem("dados", JSON.stringify(this.Tdados)); 
-  }
-  listaCarrinho = []
+  listaCarrinho;
   adicionar;
+  testando = []
   adicionarCarrinho(i){
-    this.adicionar = JSON.parse(localStorage.getItem("Ldados"));
-    this.listaCarrinho.push(this.adicionar)
-    console.log(this.listaCarrinho)    
-    localStorage.setItem("Ldados", JSON.stringify(this.Tdados[i]));
+    this.listaCarrinho.push(this.Tdados[i])
+    localStorage.setItem("Ldados", JSON.stringify(this.listaCarrinho));
+    console.log(this.listaCarrinho)        
   }
 }

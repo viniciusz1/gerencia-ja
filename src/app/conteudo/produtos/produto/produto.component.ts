@@ -32,7 +32,6 @@ export class ProdutoComponent implements OnInit {
     localStorage.setItem("Tdados", JSON.stringify(this.Tdados));
     this.router.navigate(['loja/produtos'])
   }
-
   ngOnInit() {
     this.dados = JSON.parse(localStorage.getItem("dados"));
     this.Tdados = JSON.parse(localStorage.getItem("Tdados"));

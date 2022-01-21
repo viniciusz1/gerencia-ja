@@ -20,16 +20,4 @@ export class TelaPrincipalComponent implements OnInit {
   clientes(){
     this.router.navigate(['loja/clientes'])
   }
-//   gpe(){
-//     this.router.navigate(['loja/pedidos/gerenciar-pedidos'])
-//   }
-//   gro(){
-//     this.router.navigate(['loja/produtos/gerenciar-produtos'])
-//   }
-//   cli(){
-//     this.router.navigate(['loja/clientes/gerenciar-clientes'])
-//   }
-//   <button (click)='gpe()'>gpe</button>
-// <button (click)='gro()'>gro</button>
-// <button (click)='cli()'>cli</button>
 }

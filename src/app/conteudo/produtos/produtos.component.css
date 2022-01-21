@@ -1,0 +1,39 @@
+html{
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 20%;
+    display: grid;
+}
+.escrito{
+    width: 200px;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    width: 100vw;
+    height: 100vh;
+    background: #6C7A89;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.items{
+    background-color: aqua;
+    border: black solid 1px;
+    margin-bottom: 3px;
+    padding-left: 10px;
+    display: flex;
+    width: 608px;
+}
+button{
+    background-color: grey;
+    border: 1px black solid;
+    padding: 10px;
+    margin: 3px;
+}

@@ -1,20 +1,27 @@
-<div *ngFor="let lista of Tdados; let i = index">
-    <li *ngIf="lista.deleted != true">
-        Produto: {{lista.nome}} Valor:{{lista.preco}},00R$
+<html>
+<div *ngFor="let lista of Tdados; let i = index" >
+    <div class="items" *ngIf="lista.deleted != true">
+        <div class="escrito">
+            Produto: {{lista.nome}} Valor:{{lista.preco}},00R$
+        </div>
         <button (click)='editarProduto(lista.id)'>Editar Produto</button>
-        
+
         <button (click)='removerProduto(i)'>Remover Produto</button>
-        <button (click)='adicionarCarrinho(i)'>Adicionar ao carrinho</button>
-    </li>
+        <button (click)='adicionarCarrinho(i)'>Adicionar a produtos</button>
+    </div>
 </div>
+
 <br>
+
 <div>
-   
     <button (click)='adicionarProduto(Tdados.length+1)'>Adicionar Produto</button>
     <div *ngIf="clicou==true">
         <br /><input [(ngModel)]="nome" placeholder="nome do produto">
         <br /><input [(ngModel)]="preco" placeholder="valor do produto">
         <button (click)="produtoAdicionado()">Enviar</button>
-
     </div>
 </div>
+
+<button (click)="irProdutos()">Ir para produtos</button>
+
+</html>

@@ -1,8 +1,20 @@
+<header>Status{{status}}</header>
+  <div *ngIf="Ldados != null">
 <div>
-  {{user}}
+  Usuário: {{user}}
   </div>
-<div *ngFor="let lista of Ldados">
-  {{lista.nome}}
+<div *ngFor="let lista of Ldados; let i = index">
+  <div *ngIf="lista.deleted == false">
+ Produto:{{lista.nome}} - Preço:{{lista.preco}}.00R$ - Número: {{i+1}}
+ <button (click)="removerPedido(i)">Remover Pedido</button>
+
 </div>
 
-oi
+</div>
+<div>
+    <button (click)="fechaOrcamento()">Fechar Orçamento</button>
+<div *ngIf="status=='Fechado'">
+  Valor Total: {{total}}
+</div>
+</div>
+</div>

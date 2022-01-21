@@ -9,10 +9,10 @@ export class TelaLoginComponent implements OnInit {
 
   constructor(private router: Router) { }
   listaProdutos = [
-    {nome: 'poi', id: 1, preco: 123, deleted: false},
-    {nome: 'pasdfi', id: 2, preco: 23, deleted: false},
-    {nome: 'poasdfdfdi', id: 3, preco: 13, deleted: false},
-    {nome: 'poidfds', id: 4, preco: 12, deleted: false},
+    {nome: 'Dicionário', id: 1, preco: 123, deleted: false},
+    {nome: 'Livro de Matemárica', id: 2, preco: 23, deleted: false},
+    {nome: 'Teclado', id: 3, preco: 13, deleted: false},
+    {nome: 'Raquete de tênis', id: 4, preco: 12, deleted: false},
 
   ]
 users = [

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { e } from '@angular/core/src/render3';
 @Component({
@@ -44,12 +44,22 @@ export class ProdutosComponent implements OnInit {
     this.clicou= false;
     localStorage.setItem("Tdados", JSON.stringify(this.Tdados));
   }
-  listaCarrinho;
-  adicionar;
-  testando = []
-  adicionarCarrinho(i){
-    this.listaCarrinho.push(this.Tdados[i])
+  listaCarrinho = [];
+  teste = 0
+  total = 0;
+  @Output() emitir = new EventEmitter<any>();
+  adicionarCarrinho(index){
+    this.listaCarrinho.push(this.Tdados[index])
     localStorage.setItem("Ldados", JSON.stringify(this.listaCarrinho));
-    console.log(this.listaCarrinho)        
+    this.listaCarrinho.forEach(element => {
+    this.teste = parseInt(element.preco)
+    });    
+    this.total = this.total + this.teste
+    this.teste = 0
+    
+    localStorage.setItem('total', JSON.stringify(this.total));
+  }
+  irProdutos(){
+    this.router.navigate(['loja/pedidos'])    
   }
 }

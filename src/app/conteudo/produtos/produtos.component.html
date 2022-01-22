@@ -1,27 +1,31 @@
 <html>
-<div *ngFor="let lista of Tdados; let i = index" >
-    <div class="items" *ngIf="lista.deleted != true">
-        <div class="escrito">
-            Produto: {{lista.nome}} Valor:{{lista.preco}},00R$
+
+<body>
+
+    <div *ngFor="let lista of Tdados; let i = index">
+        <div class="items" *ngIf="lista.deleted != true">
+            <div class="escrito">
+                Produto: {{lista.nome}} Valor:{{lista.preco}},00R$
+            </div>
+            <button class="btn btn-efeito" (click)='editarProduto(lista.id)'>Editar Produto</button>
+
+            <button class="btn btn-efeito"(click)='removerProduto(i)'>Remover Produto</button>
+            <button class="btn btn-efeito"(click)='adicionarCarrinho(i)'>Adicionar a produtos</button>
         </div>
-        <button (click)='editarProduto(lista.id)'>Editar Produto</button>
-
-        <button (click)='removerProduto(i)'>Remover Produto</button>
-        <button (click)='adicionarCarrinho(i)'>Adicionar a produtos</button>
     </div>
-</div>
 
-<br>
+    <br>
 
-<div>
-    <button (click)='adicionarProduto(Tdados.length+1)'>Adicionar Produto</button>
-    <div *ngIf="clicou==true">
-        <br /><input [(ngModel)]="nome" placeholder="nome do produto">
-        <br /><input [(ngModel)]="preco" placeholder="valor do produto">
-        <button (click)="produtoAdicionado()">Enviar</button>
+    <div>
+        <button class="btn btn-efeito" (click)='adicionarProduto(Tdados.length+1)'>Adicionar Produto</button>
+        <div *ngIf="clicou==true">
+            <br /><input [(ngModel)]="nome" placeholder="nome do produto">
+            <br /><input [(ngModel)]="preco" placeholder="valor do produto">
+            <button  (click)="produtoAdicionado()">Enviar</button>
+        </div>
     </div>
-</div>
 
-<button (click)="irProdutos()">Ir para produtos</button>
+    <button class="btn btn-efeito" (click)="irProdutos()">Ir para produtos</button>
+</body>
 
 </html>

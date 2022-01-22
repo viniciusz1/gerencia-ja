@@ -1,20 +1,28 @@
-<header>Status{{status}}</header>
-  <div *ngIf="Ldados != null">
-<div>
-  Usuário: {{user}}
+<body>
+  <header>
+    <div class="status">
+      Status{{status}}
+    </div>
+  </header>
+
+
+  <div *ngIf="Ldados != null" class="conteudo">
+    <div class="usuario">
+      Usuário: {{user}}
+    </div>
+    <div *ngFor="let lista of Ldados; let i = index">
+      <div class="items" *ngIf="lista.deleted == false">
+        <div class="escrito">
+          Produto:{{lista.nome}} - Preço:{{lista.preco}}.00R$ - Número: {{i+1}}
+        </div>
+        <button class="btn btn-efeito" (click)="removerPedido(i)">Remover Pedido</button>
+      </div>
+    </div>
+    <div>
+      <button class="btn btn-efeito" (click)="fechaOrcamento()">Fechar Orçamento</button>
+      <div *ngIf="status=='Fechado'">
+        Valor Total: {{total}}
+      </div>
+    </div>
   </div>
-<div *ngFor="let lista of Ldados; let i = index">
-  <div *ngIf="lista.deleted == false">
- Produto:{{lista.nome}} - Preço:{{lista.preco}}.00R$ - Número: {{i+1}}
- <button (click)="removerPedido(i)">Remover Pedido</button>
-
-</div>
-
-</div>
-<div>
-    <button (click)="fechaOrcamento()">Fechar Orçamento</button>
-<div *ngIf="status=='Fechado'">
-  Valor Total: {{total}}
-</div>
-</div>
-</div>
+</body>

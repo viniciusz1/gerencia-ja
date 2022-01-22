@@ -1,3 +1,4 @@
+import { style } from '@angular/animations';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -23,7 +24,7 @@ export class PedidosComponent implements OnInit {
   }
   fechaOrcamento(){
     this.status="Fechado"
-    console.log(this.status)
+    
     
   }
   ngOnInit() {

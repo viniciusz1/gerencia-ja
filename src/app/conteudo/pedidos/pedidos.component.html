@@ -1,7 +1,7 @@
 <body>
   <header>
     <div class="status">
-      Status{{status}}
+      Status: {{status}}
     </div>
   </header>
 
@@ -21,7 +21,7 @@
     <div>
       <button class="btn btn-efeito" (click)="fechaOrcamento()">Fechar Orçamento</button>
       <div *ngIf="status=='Fechado'">
-        Valor Total: {{total}}
+        Valor Total: R${{total}}.00
       </div>
     </div>
   </div>

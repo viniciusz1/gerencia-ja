@@ -1,8 +1,8 @@
 html{
-    display: block;
-    background: #6C7A89;
-    height: 100vh;
-    width: 100vw;
+  display: block;
+  background: #6C7A89;
+  height: 100vh;
+  width: 100vw;
 }
 body{
     
@@ -21,7 +21,7 @@ body{
 
 }
 .items{
-    background-color: aqua;
+    background-color: rgb(126, 201, 194);
     border: black solid 1px;
     margin-bottom: 3px;
     padding:3px;

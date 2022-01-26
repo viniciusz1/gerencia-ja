@@ -1,7 +1,12 @@
+<html>
 <div>
-  cliente trabalhando e tals
+  CLIENTES
 </div>
-<div *ngFor="let cliente of listaClientes">
-  Cliente: {{cliente}}
-  <button (click)='AbreGerenciarClientes()'>Gerenciar </button>
+<div *ngFor="let cliente of listaClientes" class="items">
+  <div class="escrito">
+    Cliente: {{cliente}}
   </div>
+  <button (click)='AbreGerenciarClientes()'>Gerenciar </button>
+</div>
+
+</html>

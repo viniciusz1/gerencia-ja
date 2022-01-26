@@ -1,0 +1,18 @@
+html{
+    background-color: #6C7A89;
+    height: 100vh;
+    width: 100vw;
+    padding-top: 100px;
+    padding-left: 100px;
+}
+.items{
+    background-color: rgb(126, 201, 194);
+    border: black solid 1px;
+    margin-bottom: 3px;
+    padding:3px;
+    display: flex;
+    width: 270px;
+}
+.escrito{
+    width: 200px;
+}
